@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap'):root {
+    --bg: #f4f4f4;
+    --text: #111;
+    --card: #fff;
+    --high: #ff4d4d;
+    --medium: #ffc107;
+    --low: #4caf50;
+    --completed: #ccc;
+}
+
+body.dark {
+    --bg: #1f1f1f;
+    --text: #f4f4f4;
+    --card: #2c2c2c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+}
+
+.app {
+    max-width: 600px;
+    margin: auto;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.task-form input,
+.task-form select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #2196f3;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.task-list .task {
+    background: var(--card);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: var(--completed);
+    opacity: 0.7;
+}
+
+.task .priority {
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.priority.High {
+    background-color: var(--high);
+    color: white;
+}
+
+.priority.Medium {
+    background-color: var(--medium);
+}
+
+.priority.Low {
+    background-color: var(--low);
+    color: white;
+}
+
+.task.overdue {
+    border-left: 5px solid red;
+}
+
+.task .controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.task .controls button {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
